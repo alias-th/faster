@@ -1,0 +1,55 @@
+// EXAMPLE
+// @mixin absCenter {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+
+// BREAK POINT
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile-s {
+    @media (max-width: 24em) {
+      // 380
+      @content;
+    }
+  }
+  @if $breakpoint == mobile {
+    @media (max-width: 31em) {
+      // 496
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-m {
+    @media (max-width: 47em) {
+      // 624
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 51em) {
+      // 805
+      @content;
+    }
+  }
+  @if $breakpoint == laptop {
+    @media (max-width: 62em) {
+      // 990
+      @content;
+    }
+  }
+  @if $breakpoint == laptop-l {
+    @media (max-width: 79em) {
+      // 1250
+      @content;
+    }
+  }
+
+  // Mobile first
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      // 1800
+      @content;
+    }
+  }
+}

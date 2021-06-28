@@ -1,0 +1,59 @@
+.header {
+  display: grid;
+  grid-template-columns: minmax(min-content, 9rem) minmax(min-content, 1fr) minmax(
+      min-content,
+      9rem
+    );
+  grid-template-rows: repeat(3, minmax(max-content, 1fr));
+
+  @include respond(laptop) {
+    grid-template-columns: minmax(min-content, 1.5rem) minmax(min-content, 1fr) minmax(
+        min-content,
+        1.5rem
+      );
+  }
+  @include respond(tablet) {
+    grid-template-columns: minmax(min-content, 2.5rem) minmax(min-content, 1fr) minmax(
+        min-content,
+        2.5rem
+      );
+  }
+}
+
+.realtor {
+  display: grid;
+  font-size: 1.6rem;
+  grid-template-columns: max-content;
+  grid-template-rows: max-content;
+
+  align-items: center;
+  justify-items: center;
+
+  align-content: center;
+  justify-content: center;
+
+  @include respond(tablet-m) {
+    grid-template-columns: min-content min-content;
+    grid-template-rows: max-content max-content;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-row-gap: 5rem;
+    grid-column-gap: 2rem;
+
+    &--detail {
+      &--h1 {
+        color: white;
+      }
+      &--p {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    @include respond(tablet-m) {
+      grid-template-columns: repeat(6, max-content);
+    }
+  }
+}

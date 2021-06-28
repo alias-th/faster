@@ -1,0 +1,33 @@
+.realtor {
+  &__heading-3 {
+    text-transform: uppercase;
+    color: $color-primary-3;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+    @include respond(tablet-m) {
+      grid-column: 1/-1;
+    }
+  }
+
+  &__list {
+    padding: 2rem;
+    &--img {
+      height: 6rem;
+      width: 7rem;
+
+      border-radius: 50%;
+    }
+
+    &--detail--h1 {
+      font-size: 1.6rem;
+    }
+
+    &--detail--p {
+      font-size: 1.3rem;
+    }
+
+    @include respond(tablet-m) {
+      grid-column: 1/-1;
+    }
+  }
+}

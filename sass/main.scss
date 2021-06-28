@@ -1,0 +1,22 @@
+@import "./abstracts/variable";
+@import "./abstracts/mixins";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/header-component";
+@import "./components/realtors-component";
+@import "./components/options-component";
+@import "./components/story-image-component";
+@import "./components/story-content-component";
+@import "./components/cars-component";
+@import "./components/image-cars-component";
+@import "./components/footer-component";
+
+@import "./layout/grid";
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/body";
+@import "./layout/footer";
+
+@import "./page/home";

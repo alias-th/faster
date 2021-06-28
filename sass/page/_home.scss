@@ -1,0 +1,72 @@
+// section
+.sidebar {
+  background-color: $color-primary-1;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
+
+  @include respond(tablet) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+}
+
+.header {
+  background-image: linear-gradient(
+      rgba($color-primary-1, 0.9),
+      rgba($color-primary-2, 0.8)
+    ),
+    url("../../img/car-6.jpg");
+  background-position: center;
+  background-size: cover;
+
+  grid-column: full-start / 9;
+
+  // @include respond(tablet) {
+  //   // grid-row: 2 / 3;
+  // }
+  @include respond(tablet-m) {
+    grid-column: 1/-1;
+  }
+}
+.realtor {
+  background-color: $color-primary-1;
+  grid-column: 9 / full-end;
+
+  // @include respond(tablet) {
+  //   // grid-row: 2 / 3;
+  // }
+
+  @include respond(tablet-m) {
+    grid-column: 1/-1;
+    padding: 2rem;
+  }
+}
+
+.options {
+  background-color: white;
+  grid-column: center-start / center-end;
+}
+.story-image {
+  grid-column: full-start / 7;
+
+  @include respond(laptop-l) {
+    grid-column: center-start / center-end;
+  }
+}
+.story-content {
+  grid-column: 7 / full-end;
+
+  @include respond(laptop-l) {
+    grid-column: center-start / center-end;
+  }
+}
+.cars {
+  grid-column: center-start / center-end;
+}
+.image-cars {
+  grid-column: full-start / full-end;
+}
+.footer {
+  background-color: $color-primary-1;
+  grid-column: 1 / full-end;
+}
